@@ -12,7 +12,7 @@ module.exports = defineConfig({
   includeShadowDom: true,
   taskTimeout:70000,
   chromeWebSecurity : true,
-  testIsolation : true,
+  //testIsolation : true,
   retries: {
     runMode: 2, // Number of times to retry commands in run mode
     openMode: 1, // Number of times to retry commands in open mode
