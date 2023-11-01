@@ -1,0 +1,7 @@
+{
+  "UserName": "Admin",
+  "Password": "admin123",
+  "body": "Fixtures are a great way to mock data for responses to routes",
+  "IncUserName" : "wsdadmin@yourstore.com",
+  "IncPassword" : "dwadmin"
+}
