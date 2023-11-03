@@ -8,7 +8,7 @@ class Add {
   dropVacancy = "div.oxd-select-text-input";
   txtEmailContact =
     'div.oxd-input-group.oxd-input-field-bottom-space div input[placeholder="Type here"]';
-  ResumeUpload = 'input[type="file"]';
+  ResumeUpload = 'input.oxd-file-input';
   txtKeywords = 'input[placeholder="Enter comma seperated words..."]';
   dateDOA = 'input[placeholder="yyyy-mm-dd"]';
   txtNotes = "textarea.oxd-textarea--resize-vertical";
@@ -45,15 +45,16 @@ class Add {
     cy.get(this.txtEmailContact).eq(1).type(num);
   }
   resumeUpload(file) {
-    //cy.get(this.ResumeUpload).as('FileInput');
-    //cy.get('@FileInput').attachFile('MyData.pdf',{force:true});
-    cy.get('input[type="file"]').attachFile({
+    cy.get(this.ResumeUpload).as('FileInput');
+    cy.get('@FileInput').selectFile(file, {force:true});
+    //cy.get('@FileInput').attachFile(fileN);
+    /*cy.get('input[type="file"]').attachFile({
       filePath: "OrangeData.json",
       force: true,
-    });
+    }); */
   }
   verifyUploadedResume(resume) {
-    cy.get("div.oxd-file-input-div").contains(resume);
+    cy.get("div.oxd-file-input-div").should('contain',resume);
   }
   enterKeywords(keyword) {
     cy.enterText(this.txtKeywords, keyword);

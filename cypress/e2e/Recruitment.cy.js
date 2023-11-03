@@ -40,8 +40,8 @@ describe("Recruitment", () => {
     Add.verifyPageTitle("Add Candidate");
     // Add.selVacancy('Senior QA Lead');
     Add.enterEmail("xyz@yahoo.com");
-    // Add.resumeUpload('MyData.pdf');
-    // Add.verifyUploadedResume('MyData.pdf');
+    Add.resumeUpload('MyData.pdf');
+    Add.verifyUploadedResume('MyData.pdf');
     Add.enterFirstName("Brijesh");
     Add.enterLastName("Chandra");
     Add.enterMiddleName("-");
@@ -51,6 +51,7 @@ describe("Recruitment", () => {
     Add.enterDOA("2023-11-01");
     Add.checkConsentData();
     Add.clickOnSubmit();
+    cy.wait(10000);
     Add.verifyCandidateAdded('Brijesh - Chandra');
   });
 });
