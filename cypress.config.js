@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  projectId: 'npvo6b',
   reporter: 'cypress-mochawesome-reporter',
  // baseUrl : "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
   pageLoadTimeout: 30000,

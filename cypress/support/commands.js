@@ -60,5 +60,6 @@ Cypress.Commands.add('login', (username, password) => {
   })
 
   Cypress.Commands.add('logout',()=>{
-    cy.get('a.nav-link').contains('Logout').click();
+  cy.get('.oxd-icon.bi-caret-down-fill.oxd-userdropdown-icon').click();
+  cy.get('a[role="menuitem"]').contains('Logout').click();
   })

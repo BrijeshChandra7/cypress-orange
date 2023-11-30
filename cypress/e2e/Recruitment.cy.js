@@ -53,5 +53,7 @@ describe("Recruitment", () => {
     Add.clickOnSubmit();
     cy.wait(10000);
     Add.verifyCandidateAdded('Brijesh - Chandra');
+    cy.wait(5000);
+    cy.logout();
   });
 });
